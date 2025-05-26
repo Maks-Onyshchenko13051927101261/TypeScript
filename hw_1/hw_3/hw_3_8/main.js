@@ -1,3 +1,4 @@
+"use strict";
 let usersList = [
     {
         id: 1,
@@ -230,9 +231,7 @@ let usersList = [
         }
     }
 ];
-
 document.write('<div class="users-box">');
-
 for (let user of usersList) {
     document.write(`<div class="user-block">
                     <h2>${user.id} – ${user.name} – ${user.username} </h2>
@@ -245,5 +244,4 @@ for (let user of usersList) {
                     </div>
                 </div>`);
 }
-
 document.write('</div>');

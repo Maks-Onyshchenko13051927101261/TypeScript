@@ -1,3 +1,4 @@
+"use strict";
 function createUsers(users) {
     for (let user of users) {
         document.write(`<ul>
@@ -7,5 +8,4 @@ function createUsers(users) {
                         </ul>`);
     }
 }
-
 createUsers([]);

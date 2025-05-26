@@ -1,7 +1,11 @@
-let x = +prompt("ведіть числове значення 'a'");
-
-if (x !== 0) {
-    console.log("Вірно");
-} else {
-    console.log("Невірно");
+"use strict";
+let xString = prompt("ведіть числове значення 'a'");
+if (xString !== null) {
+    let xNumber = +xString;
+    if (xNumber !== 0) {
+        console.log("Вірно");
+    }
+    else {
+        console.log("Невірно");
+    }
 }

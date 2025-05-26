@@ -1,9 +1,9 @@
-let createList = (textItem, numberItem) => {
+"use strict";
+let createItemsList = (textItem, numberItem) => {
     document.write(`<ul>`);
-    for(let i = 0; i < numberItem; i++){
+    for (let i = 0; i < numberItem; i++) {
         document.write(`<li>${textItem}</li>`);
     }
     document.write(`<ul>`);
-}
-
-createList("OKTEN is cool!",7);
+};
+createItemsList("OKTEN is cool!", 7);

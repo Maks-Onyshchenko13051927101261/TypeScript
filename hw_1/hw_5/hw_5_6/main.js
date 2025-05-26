@@ -1,8 +1,7 @@
-let createList = (listItem) =>
-    document.write(`<ul>
+"use strict";
+let createListItem = (listItem) => document.write(`<ul>
                         <li>${listItem}</li>
                         <li>${listItem}</li>
                         <li>${listItem}</li>
                     </ul>`);
-
-createList("OKTEN is cool!")
+createListItem("OKTEN is cool!");

@@ -1,4 +1,5 @@
-let swap = (arr, indexA, indexB) => {
+"use strict";
+let swapArr = (arr, indexA, indexB) => {
     if (indexA < arr.length && indexB < arr.length) {
         let temp = arr[indexA];
         arr[indexA] = arr[indexB];
@@ -6,5 +7,5 @@ let swap = (arr, indexA, indexB) => {
         return arr;
     }
     return "invalid value";
-}
-console.log(swap());
+};
+console.log(swapArr([], 0, 1));

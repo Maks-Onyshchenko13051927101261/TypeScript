@@ -1,3 +1,4 @@
+"use strict";
 let creatUserCart = (array) => {
     for (let arrayEl of array) {
         document.write(`<ul>
@@ -6,6 +7,5 @@ let creatUserCart = (array) => {
                             <li>${arrayEl.age}</li>
                         </ul>`);
     }
-}
-
+};
 creatUserCart([]);

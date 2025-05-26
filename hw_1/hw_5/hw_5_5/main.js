@@ -1,4 +1,3 @@
-let templateP = (textP) =>
-    document.write(`<p>${textP}</p>`);
-
+"use strict";
+let templateP = (textP) => document.write(`<p>${textP}</p>`);
 templateP("Hello OKTEN");

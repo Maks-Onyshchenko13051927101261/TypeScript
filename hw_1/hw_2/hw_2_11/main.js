@@ -1,5 +1,5 @@
-let x = +prompt();
-
+"use strict";
+let x = prompt();
 if (!x) {
     x = "default";
     console.log(x);

@@ -1,10 +1,16 @@
-let a = +prompt("Enter number a");
-let b = +prompt("Enter number b");
-
-if(a === b){
-    console.log("A = B");
-} else if (a > b){
-    console.log("A > b");
-}  else {
-    console.log("a < B");
+"use strict";
+let numA = prompt("Enter number a");
+let numB = prompt("Enter number b");
+if (numA !== null && numB !== null) {
+    let a = +numA;
+    let b = +numB;
+    if (a === b) {
+        console.log("A = B");
+    }
+    else if (a > b) {
+        console.log("A > b");
+    }
+    else {
+        console.log("a < B");
+    }
 }

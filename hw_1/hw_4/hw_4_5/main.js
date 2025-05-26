@@ -1,3 +1,4 @@
+"use strict";
 function createP(templateText) {
     document.write(`<p>${templateText}</p>`);
 }

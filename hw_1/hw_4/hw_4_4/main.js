@@ -1,5 +1,6 @@
+"use strict";
 function renderArr(arr) {
-    for (let i of arr){
+    for (let i of arr) {
         console.log(i);
     }
 }

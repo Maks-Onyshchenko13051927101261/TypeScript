@@ -1,3 +1,4 @@
+"use strict";
 let minNumberArr = (array) => {
     let minNumber = array[0];
     for (let arrayEl of array) {
@@ -6,6 +7,5 @@ let minNumberArr = (array) => {
         }
     }
     return minNumber;
-}
-
+};
 console.log(minNumberArr([]));

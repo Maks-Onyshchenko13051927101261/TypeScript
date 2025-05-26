@@ -1,3 +1,4 @@
+"use strict";
 function swap(arr, indexA, indexB) {
     if (indexA < arr.length && indexB < arr.length) {
         let temp = arr[indexA];
@@ -7,5 +8,4 @@ function swap(arr, indexA, indexB) {
     }
     return 'invalid index';
 }
-
-console.log(swap());
+console.log(swap([], 1, 0));

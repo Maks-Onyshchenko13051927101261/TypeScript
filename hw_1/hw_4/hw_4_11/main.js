@@ -1,3 +1,4 @@
+"use strict";
 function sumArr(arr) {
     let sum = 0;
     for (const arrEl of arr) {
