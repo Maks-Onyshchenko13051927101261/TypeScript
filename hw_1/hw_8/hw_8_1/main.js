@@ -1,10 +1,10 @@
-let coursesAndDurationArray = [
-    {title: "JavaScript Complex", monthDuration: 5},
-    {title: "Java Complex", monthDuration: 6},
-    {title: "Python Complex", monthDuration: 6},
-    {title: "QA Complex", monthDuration: 4},
-    {title: "FullStack", monthDuration: 7},
-    {title: "Frontend", monthDuration: 4}
+"use strict";
+let coursesDurationArr = [
+    { title: "JavaScript Complex", monthDuration: 5 },
+    { title: "Java Complex", monthDuration: 6 },
+    { title: "Python Complex", monthDuration: 6 },
+    { title: "QA Complex", monthDuration: 4 },
+    { title: "FullStack", monthDuration: 7 },
+    { title: "Frontend", monthDuration: 4 }
 ];
-
-console.log(coursesAndDurationArray.map((courses, index)=> ({id: index + 1, ...courses})));
+console.log(coursesDurationArr.map((courses, index) => ({ id: index + 1, ...courses })));

@@ -1,11 +1,10 @@
-"use strict";
-function cloneObject(obj) {
-    if (obj) {
+function cloneObject(obj:any):any {
+    if(obj){
         let functions = [];
         for (const key in obj) {
-            if (typeof obj[key] === 'function') {
+            if(typeof obj[key] === 'function'){
                 const cloneFunk = obj[key].bind();
-                functions.push({ cloneFunk, key });
+                functions.push({cloneFunk, key});
             }
         }
         let cloneObj = JSON.parse(JSON.stringify(obj));
@@ -17,6 +16,5 @@ function cloneObject(obj) {
     }
     throw new Error("Unexpected");
 }
-cloneObject({ name: "val", age: 12, foo() {
-        console.log("hello");
-    }, foobar() { } });
+cloneObject({name: "val", age: 12, foo(){
+        console.log("hello");}, foobar(){}});
