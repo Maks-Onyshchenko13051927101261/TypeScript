@@ -1,8 +1,8 @@
+"use strict";
 // #OPLI89c9G
-let arr = ["Main","Products","About us","Contacts"];
-
+let arrayStr = ["Main", "Products", "About us", "Contacts"];
 let menuList = document.createElement("ul");
-for (const item of arr) {
+for (const item of arrayStr) {
     const liItem = document.createElement("li");
     liItem.innerText = item;
     menuList.appendChild(liItem);

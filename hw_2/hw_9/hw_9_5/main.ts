@@ -1,5 +1,16 @@
-"use strict";
-let coursesArrDuration = [
+// Є масив coursesArray
+// Створити для кожного елементу масиву свій блок,
+// блок розділити блоками, в яких будуть зберігатись значення окремих властивостей,
+// для властивості modules зробити список з елементами
+// Приклад структури знаходиться у файлі example.png, який лежить в папці img
+type coursesArrayModulesType = string[];
+type coursesArrDurationType = {
+    title: string,
+    monthDuration: number,
+    hourDuration: number,
+    modules: coursesArrayModulesType
+};
+let coursesArrDuration: coursesArrDurationType[] = [
     {
         title: 'JavaScript Complex',
         monthDuration: 5,
@@ -69,22 +80,23 @@ let coursesArrDuration = [
     }
 ];
 for (const course of coursesArrDuration) {
-    const divCourse = document.createElement("div");
+    const divCourse:HTMLDivElement = document.createElement("div");
     divCourse.classList.add('container');
-    const titleCourse = document.createElement("h2");
+    const titleCourse:HTMLHeadingElement = document.createElement("h2");
     titleCourse.innerText = course.title;
     titleCourse.classList.add('title');
-    const courseMonth = document.createElement("span");
+    const courseMonth:HTMLSpanElement = document.createElement("span");
     courseMonth.innerText = `Months: ${course.monthDuration}`;
-    const courseHour = document.createElement("span");
+    const courseHour:HTMLSpanElement = document.createElement("span");
     courseHour.innerText = `Hours: ${course.hourDuration}`;
-    const listModule = document.createElement("ul");
+    const listModule:HTMLUListElement = document.createElement("ul");
     listModule.classList.add('list');
     for (const module of course.modules) {
-        const itemModule = document.createElement("li");
+        const itemModule:HTMLLIElement = document.createElement("li");
         itemModule.innerText = `${module}`;
         listModule.appendChild(itemModule);
     }
+
     divCourse.append(titleCourse, courseMonth, courseHour, listModule);
     document.body.appendChild(divCourse);
 }
