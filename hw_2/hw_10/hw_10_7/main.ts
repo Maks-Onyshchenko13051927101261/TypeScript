@@ -1,9 +1,9 @@
-"use strict";
 // #RbQGnH5DuC
 // В localStorage зберігаються масиви.
 // Вам потрібно зробити функцію, які дістає потрібний вам масив з localStorage та додає в нього об’єкт
 // сигнатура функції – addToLocalStorage(arrayName:string,objToAdd:any{}):void
-function addToLocalStorage(arrayName, objToAdd) {
+
+function addToLocalStorage(arrayName:string, objToAdd:{}):void {
     let arrayObj = localStorage.getItem(arrayName);
     if (!arrayObj) {
         throw new Error(`Array ${arrayName} not found!`);

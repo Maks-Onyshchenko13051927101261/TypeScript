@@ -1,12 +1,13 @@
-"use strict";
 // #kUSgFqWY
 // Створити 3 інпута та кнопку.
 // Один визначає кількість рядків, другий – кількість ячеєк, третій – вміст ячеєк.
 // При натисканні кнопки вся ця інформація зчитується і формується табличка з відповідним вмістом.
-let creatTemplate = document.getElementById("creatList");
-let createForm = document.forms[0];
+
+let creatTemplate: HTMLElement | null = document.getElementById("creatList");
+
+let createForm: HTMLFormElement = document.forms[0];
 createForm.addEventListener("submit", (event) => {
-    if (creatTemplate) {
+    if(creatTemplate) {
         creatTemplate.innerText = "";
         event.preventDefault();
         const templateRows = createForm.rows.value;
@@ -22,4 +23,4 @@ createForm.addEventListener("submit", (event) => {
             creatTemplate.appendChild(row);
         }
     }
-});
+})

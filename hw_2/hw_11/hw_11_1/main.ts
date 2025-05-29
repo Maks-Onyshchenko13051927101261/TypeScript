@@ -1,11 +1,14 @@
-"use strict";
 // #HmvAfRQM
 // – взяти https://dummyjson.com/docs/carts та вивести інформацію про всі корзини.
 // Відобразити всі поля кожної корзини.
+
+
 const url = new URL("https://dummyjson.com/carts");
 let template = document.getElementsByTagName("div")[0];
+
 fetch(url).then(response => response.json()).then(objCarts => {
-    const { carts } = objCarts;
+    const {carts} = objCarts;
+
     let container = document.createElement("div");
     for (const cart of carts) {
         const titleId = document.createElement("h2");
@@ -22,7 +25,7 @@ fetch(url).then(response => response.json()).then(objCarts => {
                                 "total": ${product.total}
                                 "discountPercentage": ${product.discountPercentage}
                                 "discountedTotal": ${product.discountedTotal}
-                               `;
+                               `
             let imgListIt = document.createElement("img");
             imgListIt.src = `${product.thumbnail}`;
             itemId.appendChild(imgListIt);
@@ -37,6 +40,7 @@ fetch(url).then(response => response.json()).then(objCarts => {
                                 "totalProducts":${cart.totalProducts},
                                 "totalQuantity":${cart.totalQuantity}
                                 `;
+
         container.append(titleId, productsList, description);
         template.append(container);
     }

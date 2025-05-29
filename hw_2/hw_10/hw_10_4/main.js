@@ -6,9 +6,6 @@
 let currentNumber = Number(localStorage.getItem("number")) || 0;
 currentNumber += 1;
 localStorage.setItem("number", currentNumber.toString());
-// const eventTarget: HTMLElement | null = document.getElementById("target");
-// eventTarget.innerText = currentNumber;
-// eventTarget.style.fontSize = "4em";
 const eventTarget = document.getElementsByTagName("div");
 eventTarget[0].innerText = currentNumber.toString();
 eventTarget[0].style.fontSize = "4em";

@@ -1,11 +1,11 @@
-"use strict";
 // #whXxOBlYS0H
 // – взяти https://dummyjson.com/docs/recipes та вивести інформацію про всі рецепти.
 // Інгредієнти повинні бути списком під час відображення.
+
 const urlRecipes = new URL("https://dummyjson.com/recipes");
-let templateDiv = document.getElementsByTagName("div")[0];
+let templateDiv:HTMLDivElement = document.getElementsByTagName("div")[0];
 fetch(urlRecipes).then(res => res.json()).then(objRecipes => {
-    const { recipes } = objRecipes;
+    const {recipes} = objRecipes;
     for (const recipe of recipes) {
         const container = document.createElement("div");
         const titleRecipe = document.createElement("h2");
@@ -43,8 +43,8 @@ fetch(urlRecipes).then(res => res.json()).then(objRecipes => {
         tagTitle.innerText = `"tags":`;
         const tagList = document.createElement("ul");
         for (const tag of recipe.tags) {
-            const tagEl = document.createElement("li");
-            tagEl.innerText = `${tag}`;
+          const tagEl = document.createElement("li");
+          tagEl.innerText = `${tag}`;
             tagList.appendChild(tagEl);
         }
         const typeTitle = document.createElement("p");
@@ -53,12 +53,12 @@ fetch(urlRecipes).then(res => res.json()).then(objRecipes => {
         for (const type of recipe.mealType) {
             const typeEl = document.createElement("li");
             typeEl.innerText = `${type}`;
-            typeList.appendChild(typeEl);
+           typeList.appendChild(typeEl);
         }
         const imgRecipe = document.createElement("img");
         imgRecipe.src = `${recipe.image}`;
-        descriptions.append(descItem, tagTitle, tagList, typeTitle, typeList, imgRecipe);
+        descriptions.append(descItem,tagTitle, tagList,typeTitle, typeList, imgRecipe);
         container.append(titleRecipe, ingredientTitle, listIngredients, instructionTitle, listInstructions, descriptions);
         templateDiv.appendChild(container);
     }
-});
+})
